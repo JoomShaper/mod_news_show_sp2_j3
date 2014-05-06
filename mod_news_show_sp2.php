@@ -10,12 +10,14 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 $doc 								= JFactory::getDocument();
+
 //Basic
 $moduleclass_sfx 					= $params->get('moduleclass_sfx');
 $layout 							= $params->get('layout', 'default');
 $moduleName         				= basename(dirname(__FILE__));
 $uniqid								= ($params->get('uniqid')=="") ? $module->id : $params->get('uniqid');
 $content_source						= $params->get('content_source');
+
 //Article Layout
 $article_column						= $params->get('article_column');
 $article_row						= $params->get('article_row');
@@ -46,6 +48,22 @@ $article_comments					= $params->get('article_comments');
 $article_hits						= $params->get('article_hits');
 $article_show_ratings				= $params->get('article_show_ratings');
 $article_animation					= $params->get('article_animation');
+
+if( ( $article_animation == 'cover-horizontal-push' ) || ( $article_animation == 'cover-vertical-push' ) )
+{
+	$article_animation 				= 'nssp2-slide';
+
+}
+else if ( $article_animation == 'cover-inplace-fade' ) )
+{
+	$article_animation 				= 'nssp2-slide nssp2-fade';
+} 
+else if ( $article_animation == 'cover-inplace' ) )
+{
+	$article_animation 				= 'nssp2-noeffect';
+}
+
+
 $article_slide_count				= $params->get('article_slide_count');
 $article_controllers_style			= $params->get('article_controllers_style', 'nssp2-default');
 $article_pagination					= $params->get('article_pagination');
@@ -74,6 +92,21 @@ $links_thumb_width					= $params->get('links_thumb_width');
 $links_thumb_height					= $params->get('links_thumb_height');
 $links_thumb_ratio					= $params->get('links_thumb_ratio');
 $links_animation					= $params->get('links_animation');
+
+if( ( $links_animation == 'cover-horizontal-push' ) || ( $links_animation == 'cover-vertical-push' ) )
+{
+	$links_animation 				= 'nssp2-slide';
+
+}
+else if ( $links_animation == 'cover-inplace-fade' ) )
+{
+	$links_animation 				= 'nssp2-slide nssp2-fade';
+} 
+else if ( $links_animation == 'cover-inplace' ) )
+{
+	$links_animation 				= 'nssp2-noeffect';
+}
+
 $links_slide_count					= $params->get('links_slide_count');
 $links_controllers_style			= $params->get('links_controllers_style', 'nssp2-default');
 $links_pagination					= $params->get('links_pagination');
