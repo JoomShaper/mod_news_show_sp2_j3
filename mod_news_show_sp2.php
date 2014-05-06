@@ -54,11 +54,11 @@ if( ( $article_animation == 'cover-horizontal-push' ) || ( $article_animation ==
 	$article_animation 				= 'nssp2-slide';
 
 }
-else if ( $article_animation == 'cover-inplace-fade' ) )
+else if ( $article_animation == 'cover-inplace-fade' )
 {
 	$article_animation 				= 'nssp2-slide nssp2-fade';
 } 
-else if ( $article_animation == 'cover-inplace' ) )
+else if ( $article_animation == 'cover-inplace' )
 {
 	$article_animation 				= 'nssp2-noeffect';
 }
@@ -98,11 +98,11 @@ if( ( $links_animation == 'cover-horizontal-push' ) || ( $links_animation == 'co
 	$links_animation 				= 'nssp2-slide';
 
 }
-else if ( $links_animation == 'cover-inplace-fade' ) )
+else if ( $links_animation == 'cover-inplace-fade' )
 {
 	$links_animation 				= 'nssp2-slide nssp2-fade';
 } 
-else if ( $links_animation == 'cover-inplace' ) )
+else if ( $links_animation == 'cover-inplace' )
 {
 	$links_animation 				= 'nssp2-noeffect';
 }
