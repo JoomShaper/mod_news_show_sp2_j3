@@ -10,9 +10,10 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport('joomla.form.formfield');
-class JFormFieldAsset extends JFormField
+
+class JFormFieldAssets extends JFormField
 {
-	protected	$type = 'Asset';
+	protected	$type = 'Assets';
 	
 	protected function getInput() {
 		$doc = JFactory::getDocument();
